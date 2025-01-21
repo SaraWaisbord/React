@@ -5,9 +5,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Darker text for contrast */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+.tech-navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav Link Styles */
+.nav-links .nav-link {
+  transition: color 0.3s;
+}
+
+.nav-links .nav-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 20px; /* Rounded buttons */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Secondary button color */
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  border-radius: 0.5rem; /* Rounded dropdown */
+}
+
+/* Content Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"] {
+  border-radius: 0.5rem; /* Rounded input fields */
+  border: 1px solid #ced4da;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #80bdff; /* Blue border on focus */
+  outline: none; /* Remove outline */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #343a40; /* Dark footer */
+  color: white;
 }

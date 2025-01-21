@@ -17,6 +17,7 @@ import it from "./imgs/it.png";
 import s from "./imgs/software.jpg";
 import w from "./imgs/web.jpg";
 import './i18n'
+import "./index.css"
 import { useTranslation } from 'react-i18next';
 function App() {
   const { t, i18n } = useTranslation();  
