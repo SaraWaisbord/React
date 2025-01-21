@@ -1,0 +1,18 @@
+{
+    "Login": "Welcome to the login page",
+    "descriptionImgEli": "Elijah – CEO of Red Trucks and Revolutionary Ideas",
+    "descriptionImgFounders": "Three founders, a million ideas",
+    "homeTitle": "Hi, this is the home page",
+    "servicesTitle": "This is the services",
+    "contactTitle": "Contact Us",
+    "aboutTitle": "About Us",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "submitButton": "Submit",
+    "servicesAi": "Artificial Intelligence Service",
+    "servicesSoftware": "Software Service",
+    "servicesHardware": "Hardware Service",
+    "servicesIt": "Information Technology Service",
+    "servicesBusiness": "Business Service",
+    "servicesPhotonics": "Silicon Photonics Service"
+}

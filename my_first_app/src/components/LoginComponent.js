@@ -1,23 +1,26 @@
-import React from 'react';
+
 import { Form, Button, Container } from 'react-bootstrap';
+import '../i18n'
+import { useTranslation } from 'react-i18next';
 
 function LoginComponent() {
+    const { t } = useTranslation(); 
     return (
         <Container className="mt-5">
-            <h2>Login</h2>
+            <h2>{t("Login")}</h2>
             <Form>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Label>{t("emailLabel")}</Form.Label>
+                    <Form.Control type="email" placeholder={t("emailLabel")} />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword" className="mt-3">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Label>{t("passwordLabel")}</Form.Label>
+                    <Form.Control type="password" placeholder={t("passwordLabel")} />
                 </Form.Group>
 
                 <Button variant="primary" type="submit" className="mt-3">
-                    Submit
+                    {t("submitButton")}
                 </Button>
             </Form>
         </Container>
