@@ -19,6 +19,9 @@ import w from "./imgs/web.jpg";
 import './i18n'
 import "./index.css"
 import { useTranslation } from 'react-i18next';
+import { Provider } from 'react-redux';
+import  todos  from './components/todos';
+import store from './Redux/store';
 function App() {
   const { t, i18n } = useTranslation();  
   const translate = (language) => {
@@ -26,7 +29,8 @@ function App() {
   }
 
   return (
-    <Router>
+    <Provider store={store}>
+    {/* <Router>
       <Navbar bg="dark" variant="dark" className="tech-navbar">
         <Container>
           <Navbar.Brand className="brand-logo">TechFlow</Navbar.Brand>
@@ -64,7 +68,11 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/" element={<Home />} />
       </Routes>
-    </Router>
+    </Router> */}
+    <todos/>
+    </Provider>
+
+
   );
 }
 
