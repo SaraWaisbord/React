@@ -1,11 +1,16 @@
-import {ADD_TODO, REMOVE_TODO} from "./actionType"
+import {ADD_TODO, REMOVE_TODO,COUNT_ID} from "./actionType"
 
-export const addToDoAction = (data)=>({
+export const addToDoAction = (payload)=>({
     type:ADD_TODO,
-    payload:data,
+    payload,
 });
 
-export const removeToDoAction = (data)=>({
+export const removeToDoAction = (payload)=>({
     type:REMOVE_TODO,
-    payload:data,
+    payload,
+
+});
+
+export const countIdAction = ()=>({
+    type:COUNT_ID,
 });

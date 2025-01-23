@@ -1,79 +1,125 @@
+/* עיצוב כללי */
 body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #f4f8f2, #cce7ff); /* רקע בהיר ועדין עם צבעים פסטליים */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f9fa; /* Light gray background */
-  color: #343a40; /* Darker text for contrast */
+  padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-
-/* Navbar Styles */
-.tech-navbar {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.brand-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Nav Link Styles */
-.nav-links .nav-link {
-  transition: color 0.3s;
-}
-
-.nav-links .nav-link:hover {
-  color: #007bff; /* Change color on hover */
-}
-
-/* Button Styles */
-.btn {
-  border-radius: 20px; /* Rounded buttons */
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-secondary {
-  background-color: #6c757d; /* Secondary button color */
-  border: none;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268; /* Darker on hover */
-}
-
-/* Dropdown Menu Styles */
-.dropdown-menu {
-  border-radius: 0.5rem; /* Rounded dropdown */
-}
-
-/* Content Styles */
+/* עיצוב ה-container */
 .container {
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff; /* רקע לבן ועדין */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
-/* Input Fields */
-input[type="email"],
-input[type="password"] {
-  border-radius: 0.5rem; /* Rounded input fields */
-  border: 1px solid #ced4da;
+/* עיצוב הטופס */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbee79; /* צבע צהוב עדין */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  max-width: 400px;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #80bdff; /* Blue border on focus */
-  outline: none; /* Remove outline */
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ff4081; /* ורוד עדין */
 }
 
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #343a40; /* Dark footer */
+/* עיצוב שדות הקלט */
+input {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ff4081; /* קו תחתי ורוד */
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff80ab; /* ורוד כהה יותר כשיש פוקוס */
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3); /* הילה ורודה */
+}
+
+/* עיצוב כפתור הוספה */
+button {
+  background-color: #81d4fa; /* צבע כחול בהיר */
   color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #4caf50; /* צבע ירוק כהה יותר בעת ריחוף */
+  transform: scale(1.05); /* אפקט של הגדלה */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* עיצוב רשימת המשימות */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-left: 20px;
+}
+
+.items {
+  list-style-type: none;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f4d371; /* צבע צהוב בהיר */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.items li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+button[type="submit"] {
+  background-color: #ff4081; /* ורוד חמוד */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: #e91e63; /* ורוד כהה יותר כשמעבירים את העכבר */
 }
