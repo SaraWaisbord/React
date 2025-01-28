@@ -1,6 +1,6 @@
 
-import { useDispatch , useSelector} from "react-redux";
-import {addToDoAction, countIdAction} from '../Redux/actions'
+import { useDispatch} from "react-redux";
+import {addToDoAction} from '../Redux/actions'
 import { useState } from "react";
 
 const AddToDoComponent = ()=>{
@@ -8,8 +8,9 @@ const AddToDoComponent = ()=>{
     const [finish,setFinish] = useState('');
     const [name,setName] = useState('');
     const [priority,setPriority] = useState('');
-    const id = useSelector(state => state.id);
+    const [id,setId] = useState(0);
     const dispatch = useDispatch();
+
 //הוספתי משתנה לסטייט - יופיע נכון בלוג נוסיף את זה כמזהה הID של המשימה ואם לא....🤔
     console.log(id);
     return (
@@ -28,7 +29,7 @@ const AddToDoComponent = ()=>{
         {/* {priority}{id}{finish}{start} */}
         {/* מצליח! הבעיה לא פה... */}
         
-        <button type="submit" onClick={()=>dispatch(addToDoAction({start:start,finish:finish,name:name,priority:priority,id:id}),dispatch(countIdAction()))}>
+        <button type="submit" onClick={()=>{dispatch(addToDoAction({start:start,finish:finish,name:name,priority:priority,id:id})),setId(id+1)}}>
             Add😵
         </button>
 
