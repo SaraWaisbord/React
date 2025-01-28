@@ -3,7 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(45deg, #f4f8f2, #cce7ff); /* רקע בהיר ועדין עם צבעים פסטליים */
   color: #333;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -63,7 +63,7 @@ input:focus {
 
 /* עיצוב כפתור הוספה */
 button {
-  background-color: #81d4fa; /* צבע כחול בהיר */
+  background-color: #a1defa; /* צבע כחול בהיר */
   color: white;
   border: none;
   border-radius: 30px;

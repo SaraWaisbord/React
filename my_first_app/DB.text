@@ -1,0 +1,45 @@
+CREATE TABLE OrderManagement (
+    id int,
+    OrderCode nvarchar(15) ,
+    ProcessStatus int ,
+	OfficerCode nvarchar(20),
+	CustomerCode nvarchar(20)
+
+);
+
+
+CREATE TABLE Statuses(
+    id int,
+    ProcessStatus int ,
+	StatusDescription nvarchar(20),
+
+);
+
+
+
+CREATE TABLE SavingImages (
+    id int,
+	OfficerCode nvarchar(20),
+	images Byte[],
+	ProcessStatus int,
+
+);
+
+
+CREATE TABLE Officer (
+    id int,
+	OfficerCode nvarchar(20),
+	OfficerName nvarchar(15),
+	Phone int,
+
+);
+
+
+
+CREATE TABLE Customers (
+    id int,
+	CustomerCode nvarchar(20),
+	OfficerName nvarchar(15),
+	ProcessStatus int,
+
+);
