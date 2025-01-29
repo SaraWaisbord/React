@@ -1,14 +1,16 @@
-import { useDispatch , useSelector} from "react-redux";
-import {addToDoAction, countIdAction} from '../Redux/actions'
+import { useDispatch} from "react-redux";
+import {addToDoAction} from '../Redux/actions'
 import { useState } from "react";
 
 const AddToDoComponent = () => {
+    
     const [start,setStart] = useState('');
     const [finish,setFinish] = useState('');
     const [name,setName] = useState('');
     const [priority,setPriority] = useState('');
-    const id = useSelector(state => state.id);
+    const [id,setId] = useState(0);
     const dispatch = useDispatch();
+
     return (
         <>
         <form>
@@ -21,7 +23,7 @@ const AddToDoComponent = () => {
         <input type="number" id="new-todo-priority" placeholder="priority"  onBlur={(e) => setPriority(e.target.value)}/>
         </form>
         <>
-        <button type="submit" onClick={()=>(dispatch(addToDoAction({start:start,finish:finish,name:name,priority:priority,id:id}),dispatch(countIdAction())))}>
+        <button type="submit" onClick={()=>{(dispatch(addToDoAction({start:start,finish:finish,name:name,priority:priority,id:id}),setId(id+1)))}}>
             Add😵
         </button>
         </>

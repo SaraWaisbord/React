@@ -1,10 +1,11 @@
-import { removeToDoAction } from '../Redux/actions';
+
+
+import { removeToDoAction,restoreToDoAction,removeFromBinAction  } from '../Redux/actions';
 import AddToDoComponent from './AddToDoComponent';
 import { useSelector, useDispatch } from 'react-redux';
 
-const Todos = () => {
-
-const todo = useSelector((state) => state.todoReducer.todos || []); 
+const RemoveFromBin = () => {
+const todo = useSelector((state) => state.recycleBin.todos||[]); 
   const dispatch = useDispatch();
   console.log(todo);
     const tableRowsTodo = todo.map((element) => (
@@ -17,23 +18,27 @@ const todo = useSelector((state) => state.todoReducer.todos || []);
       </ul>
       <button
         type="submit"
-        onClick={() => dispatch(removeToDoAction(element))}
+        onClick={() => dispatch(removeFromBinAction(element))}
       >
-        Remove✌️😊
+        Remove✌️😊😍
+      </button>
+
+      <button
+        type="submit"
+        onClick={() => dispatch(restoreToDoAction(element))}
+      >
+        Restore✌️😊🤣🤣🤣🤣
       </button>
     </div>
   ));
   return (
     <>
     <div className="container">
-
-      <AddToDoComponent />
-      <h1>my todo app</h1>
+      <h1>my bin</h1>
       <div>{tableRowsTodo}</div> 
-    </div>
-    </>
+    </div></>
   );
 };
 
-export default Todos;
+export default RemoveFromBin;
 

@@ -1,4 +1,4 @@
-import {ADD_TODO, REMOVE_TODO,COUNT_ID} from "./actionType"
+import {ADD_TODO, REMOVE_TODO,RESTORE_TODO,REMOVE_BIN} from "./actionType"
 
 export const addToDoAction = (payload)=>({
     type:ADD_TODO,
@@ -11,6 +11,13 @@ export const removeToDoAction = (payload)=>({
 
 });
 
-export const countIdAction = ()=>({
-    type:COUNT_ID,
+export const restoreToDoAction = (payload)=>({
+    type:RESTORE_TODO,
+    payload,
+    
+});
+export const removeFromBinAction = (payload)=>({
+    type:REMOVE_BIN,
+    payload,
+    
 });
