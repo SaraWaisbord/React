@@ -6,7 +6,6 @@ const Todos = () => {
 
 const todo = useSelector((state) => state.todoReducer.todos || []); 
   const dispatch = useDispatch();
-  console.log(todo);
     const tableRowsTodo = todo.map((element) => (
     <div key={element.id}> 
       <ul className="items">
