@@ -1,5 +1,5 @@
 
-import  Todos  from './components/Todos.js';
+import  Todos  from './components/todos.js';
 import RemoveFromBin from './components/RemoveToRecyclebin.js';
 import store from './Redux/store';
 import { Provider } from 'react-redux';
