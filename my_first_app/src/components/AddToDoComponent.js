@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { useDispatch} from "react-redux";
-=======
-
-import { useDispatch } from "react-redux";
->>>>>>> f3aef14f81fe78540ca27d1c4e1fe7e0d590fcb4
 import {addToDoAction} from '../Redux/actions'
 import { useState } from "react";
 
