@@ -1,9 +1,8 @@
-/* עיצוב כללי */
+
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(45deg, #f4f8f2, #cce7ff); /* רקע בהיר ועדין עם צבעים פסטליים */
+  background: linear-gradient(45deg, #f4f8f2, #cce7ff); 
   color: #333;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -11,26 +10,26 @@ body {
   padding: 20px;
 }
 
-/* עיצוב ה-container */
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 90%;
   max-width: 1200px;
-  background-color: #fff; /* רקע לבן ועדין */
+  background-color: #fff; 
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   padding: 40px;
   flex-wrap: wrap;
 }
 
-/* עיצוב הטופס */
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fbee79; /* צבע צהוב עדין */
+  background-color: #fbee79; 
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -41,29 +40,28 @@ form {
 h2 {
   font-size: 26px;
   margin-bottom: 20px;
-  color: #ff4081; /* ורוד עדין */
+  color: #ff4081; 
 }
 
-/* עיצוב שדות הקלט */
 input {
   width: 80%;
   margin-bottom: 20px;
   padding: 12px;
   border: none;
-  border-bottom: 2px solid #ff4081; /* קו תחתי ורוד */
+  border-bottom: 2px solid #ff4081;
   font-size: 16px;
   background-color: transparent;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-  border-color: #ff80ab; /* ורוד כהה יותר כשיש פוקוס */
-  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3); /* הילה ורודה */
+  border-color: #ff80ab; 
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
 }
 
-/* עיצוב כפתור הוספה */
+
 button {
-  background-color: #a1defa; /* צבע כחול בהיר */
+  background-color: #a1defa; 
   color: white;
   border: none;
   border-radius: 30px;
@@ -74,15 +72,15 @@ button {
 }
 
 button:hover {
-  background-color: #4caf50; /* צבע ירוק כהה יותר בעת ריחוף */
-  transform: scale(1.05); /* אפקט של הגדלה */
+  background-color: #4caf50; 
+  transform: scale(1.05); 
 }
 
 button:focus {
   outline: none;
 }
 
-/* עיצוב רשימת המשימות */
+
 .todo-list {
   display: flex;
   flex-direction: column;
@@ -94,7 +92,7 @@ button:focus {
   list-style-type: none;
   margin: 15px 0;
   padding: 15px;
-  background-color: #f4d371; /* צבע צהוב בהיר */
+  background-color: #f4d371; 
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -110,7 +108,7 @@ button:focus {
 }
 
 button[type="submit"] {
-  background-color: #ff4081; /* ורוד חמוד */
+  background-color: #ff4081; 
   color: white;
   border: none;
   border-radius: 12px;
@@ -121,5 +119,6 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #e91e63; /* ורוד כהה יותר כשמעבירים את העכבר */
-}
+  background-color: #e91e63; 
+
+  }
