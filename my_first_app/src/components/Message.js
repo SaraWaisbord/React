@@ -6,7 +6,7 @@ const MessageComponent = () =>{
     const [m,setMessage]=useState('');
     const useRefMsg = useRef(null);
     useEffect(()=>{
-        useRefMsg.current.onscroll();
+        useRefMsg.current.scrollIntoView({ behavior: "smooth" });
     },[messageArray]);
     return<>
     <div ref={useRefMsg}>
