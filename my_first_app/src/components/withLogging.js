@@ -1,9 +1,8 @@
-import { data } from "react-router-dom";
 
 
 function WithLoggingC(Component){
     return ()=>{
-    console.log(Date.now())
+    console.log("HOC is called");
     return(
         <Component/>
     )

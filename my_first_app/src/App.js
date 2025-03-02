@@ -8,15 +8,17 @@ import MessageComponent from './components/Message.js';
 import OneHOC from './components/oneHOC.js';
 import TwoHOC from './components/twoHOC.js';
 import WithLoggingC from './components/withLogging.js';
+import useLocalStorage from './customHooks/localStorageHook.js';
 function App() {
   
-  const HocOne = WithLoggingC(OneHOC);
-  const HocTwe = WithLoggingC(TwoHOC);
+
   // const { t, i18n } = useTranslation();  
   // const translate = (language) => {
   //   i18n.changeLanguage(language);
   // }
-
+  const HocOne = WithLoggingC(OneHOC);
+  const HocTwe = WithLoggingC(TwoHOC);
+  const [theme, setTheme] = useLocalStorage("set","theme", "dark");
   return (
     <>
     <HocOne></HocOne>
